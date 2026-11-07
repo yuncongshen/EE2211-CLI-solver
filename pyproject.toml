@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ee2211-midterm"
+version = "0.1.0"
+description = "Terminal matrix and regression calculator"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "scikit-learn>=1.4", "sympy>=1.12"]
+
+[project.scripts]
+ee = "midterm_cli:main"
+
+[tool.setuptools]
+py-modules = ["midterm_cli", "calculations", "interactive", "extras", "extra_session"]
+packages = ["reference_math"]
+
+[tool.setuptools.package-data]
+reference_math = ["LICENSE"]
